@@ -1,0 +1,63 @@
+/*
+** Services Description **
+*/
+
+.block-pricing {
+  @extend .multi-column-block-heading;
+  background-color: $secodary-bg;
+  @include mobile-block-padding();
+  .field--name-field-columns {
+    h3, p {
+      border-bottom: 1px solid $secodary-bg;
+      line-height: 2.9em;
+      margin-bottom: 0;
+      @media #{$mobile} {
+        line-height: 2em;
+      }
+    }
+    h3 {
+      background-color: $gray-dark;
+      color: $light-color-for-dark-bg;
+    }
+    p {
+      background-color: $light-color-for-dark-bg;
+      text-transform: uppercase;
+      strong {
+        background-color: $bright-color;
+        color: $light-color-for-dark-bg;
+        display: block;
+        margin-top: -5px;
+      }
+    }
+    p:nth-child(2) {
+      background-color: $gray-dark;
+      border-color: $gray-dark;
+      color: $light-color-for-dark-bg;
+      font-family: $font-family-highlighted;
+      font-size: 6.5em;
+      font-weight: 700;
+      line-height: 1.2em;
+      sub {
+        bottom: 0;
+        font-size: 0.372em;
+      }
+    }
+    p:nth-child(3) {
+      background-color: $gray-dark;
+      border-bottom: 5px solid $bright-color;
+      color: transparentize($light-color-for-dark-bg, .5);
+      font-style: italic;
+      font-weight: $font-weight-semibold;
+      line-height: 2em;
+      padding-bottom: 14px;
+      text-transform: none;
+    }
+    @media #{$tablet} {
+      padding-top: 60px;
+      padding-bottom: 94px;
+      .field--item:nth-child(2) {
+        margin-top: -35px;
+      }
+    }
+  }
+}

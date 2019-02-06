@@ -1,0 +1,136 @@
+// @todo these should be their own CSS files and only included when
+// specific Drupal libraries are used.
+@import "component/alert";
+@import "component/ajax";
+@import "component/field";
+@import "component/file";
+@import "component/filter";
+@import "component/form";
+@import "component/icon";
+@import "component/navbar";
+@import "component/node";
+@import "component/panel";
+@import "component/progress-bar";
+@import "component/table-drag";
+@import "component/tabs";
+@import "component/toolbar";
+
+// jQuery UI style overrides.
+@import "jquery-ui/autocomplete";
+
+@mixin h3() {
+  color: $gray-dark;
+  font-family: $font-family-sans-serif;
+  font-size: 1.429em;
+  font-weight: 700;
+  margin-top: 5px;
+}
+@mixin p-for-dark-bg() {
+  color: transparentize($light-color-for-dark-bg, 0.2);
+  font-family: $font-family-highlighted;
+  font-size: 1.143em;
+  font-weight: 300;
+  line-height: 1.45em;/*1.643em*/
+}
+@mixin hr-for-dark-bg() {
+  border-top: 2px solid $light-color-for-dark-bg;
+  display: inline-block;
+  width: 64px;
+}
+
+@mixin mobile-block-padding() {
+  @media #{$mobile} {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+
+a {
+  font-family: $font-family-sans-serif;
+  font-weight: $font-weight-semibold;
+}
+h2 {
+  color: #212121;
+  font-family: $font-family-highlighted;
+  font-size: 2.571em;
+  text-transform: uppercase;
+}
+h3 {
+  @include h3();
+}
+h4 {
+  color: #212121;
+  font-family: $font-family-sans-serif;
+  font-size: 1em;
+  font-weight: $font-weight-semibold;
+  line-height: 1.214em;
+}
+p {
+  color: #86878b;
+  font-family: $font-family-sans-serif;
+  line-height: 1.429em;
+}
+
+ol, ul {
+  padding-left: 1.5em;
+  .popover &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Heading Block
+.main-container div[role="heading"] {
+  border-bottom: 1px solid #b7b7b7;
+  box-shadow: 0 1px 1px #d6d6d6;
+  z-index: 1;
+}
+
+// Main page content 
+.views-element-container {
+  display: none;
+}
+
+// Page header.
+.page-header {
+  border-bottom: none;
+  margin-top: 0;
+}
+
+// Footer.
+.footer {
+  background-color: $navbar-inverse-bg;
+  margin-top: 30px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-top: 1px solid #E5E5E5;
+}
+
+// Paragraphs.
+p:last-child,
+.form-group:last-child,
+.panel:last-child {
+  margin-bottom: 0;
+}
+
+// Help region.
+.region-help {
+  > .glyphicon {
+    font-size: $font-size-large;
+    float: left;
+    margin: -0.05em 0.5em 0 0;
+  }
+  .block {
+    overflow: hidden;
+  }
+}
+
+
+.help-block, .control-group .help-inline {
+  color: $gray-light;
+  font-size: 12px;
+  margin: 5px 0 10px;
+  padding: 0;
+  &:first-child {
+    margin-top: 0;
+  }
+}

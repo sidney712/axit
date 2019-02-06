@@ -1,0 +1,26 @@
+/*
+** Parallax Block **
+*/
+
+.block-parallax {
+  padding-top: 48px;
+  padding-bottom: 63px;
+  text-align: center;
+  .field--name-body {
+    button {
+      @extend .button-transparent;
+      margin-top: 21px;
+    }
+    h2 {
+      color: $light-color-for-dark-bg;
+    }
+    hr {
+      @include hr-for-dark-bg();
+      margin-top: 14px;
+      margin-bottom: 23px;
+    }
+    p {
+      @include p-for-dark-bg();
+    }
+  }
+}

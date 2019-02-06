@@ -1,0 +1,44 @@
+/*
+** Sub List Section **
+*/
+
+.block-sublistsection {
+  @extend .block-type-two-columns;
+  padding-bottom: 86px;
+  @include mobile-block-padding();
+  .field--name-field-framed-picture {
+      margin-top: 27px;
+      padding-left: 22px;
+  }
+  .field--name-body {
+    @media #{$normal} {
+      padding-left: 100px;
+    }
+    hr + p {
+      margin-bottom: 44px;
+    }
+    h4 + p {
+      margin-bottom: 37px;
+    }
+    li {
+      list-style-type: none;
+      padding-left: 50px;
+      position: relative;
+    }
+    span {      
+      border: 2px solid $bright-color;
+      border-radius: 50%;
+      color: $bright-color;
+      display: inline-block;
+      height: 40px;
+      left: -20px;
+      position: absolute;
+      text-align: center;
+      width: 40px;
+      i {
+        color: $bright-color;
+        line-height: 35px;
+      }
+    }
+  }
+}

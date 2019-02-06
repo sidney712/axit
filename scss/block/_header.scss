@@ -1,0 +1,112 @@
+/*
+** Header Block **
+*/
+
+.block-header {
+  background-color: $gray-dark;
+  background: url(../images/bg-header.jpg) center no-repeat;
+  background-size: cover;
+  padding-top: 130px;
+  padding-bottom: 119px;
+  @media #{$mobile} {
+    padding-top: 60px;
+    padding-bottom: 40px;
+  }
+  h2 {
+    color: $light-color-for-dark-bg;
+    line-height: 1.25em;
+  }
+  p {
+    @include p-for-dark-bg();
+    margin-top: 11px;
+  }
+  .container {
+    max-width: 1130px;
+  }
+  .field--name-body,
+  .field--name-field-webform {
+    padding-left: 0;
+    padding-right: 0;
+    @media #{$mobile} {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  .field--name-body {
+    margin-top: 4px;
+    max-width: 520px;
+    button {
+      @extend .button-transparent;
+      margin-top: 30px;
+      margin-right: 30px;
+    }
+    hr {
+      @include hr-for-dark-bg();
+    }
+  }
+  .trial-button {
+    display: none;
+    @media #{$mobile} {
+      display: inline-block;
+    }
+  }
+  .field--name-field-webform {
+    max-width: 360px;
+    margin-top: 30px;
+    @media #{$tablet} {
+      float: right;
+      margin-top: -30px;
+    }
+    button, button:active {
+      outline: none;
+    }
+    form {
+      @media #{$mobile} {
+        display: none;
+      }
+    }
+    input {
+      font-family: $font-family-sans-serif;
+      border-left: none;
+      border-right: none;
+      border-top: none;
+      border-radius: 0;
+      box-shadow: none;
+      margin: 20px 7% 33px;
+      width: 86%;
+      &.form-control:focus {
+        border-color: $bright-color;
+      }
+    }
+    .webform-button--submit {
+      background-color: lighten($bright-color, 5%);
+      border: none;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      font-family: $font-family-sans-serif;
+      font-size: 1.071em;
+      font-weight: $font-weight-semibold;
+      line-height: 3em;
+      margin: 20px -16px -1px;
+      padding-bottom: 4px;
+      width: calc(100% + 32px);
+    }
+    .panel-title {
+      color: $gray-dark;
+      font-family: $font-family-sans-serif;
+      font-size: 1.5em;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      text-align: center;
+      text-transform: capitalize;
+      span {
+        color: $bright-color;
+        text-transform: uppercase;
+      }
+    }
+    .panel-body {
+      border: none;
+      padding-bottom: 0;
+    }
+  }
+}

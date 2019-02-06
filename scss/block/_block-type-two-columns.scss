@@ -1,0 +1,40 @@
+/*
+** Common styling for two columns type blocks **
+*/
+
+.block-type-two-columns {
+  padding-top: 100px;
+  .field--name-field-framed-picture {
+      position: relative;
+      margin-bottom: 35px;
+    img {
+      background: #ececec url(../images/window-buttons.jpg) top left no-repeat;
+      box-shadow: 0 16px 45px 4px #bebebe;
+      padding-top: 12px;
+      margin-left: auto;
+      margin-right: auto;
+      @media #{$normal} {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+  .field--name-body {
+    & > :not(ul) {
+      text-align: center;
+    }
+    hr {
+      border-top: 2px solid $bright-color;
+      margin-top: 16px;
+      width: 64px;
+    }
+    @media #{$normal} {
+      & > :not(ul) {
+        text-align: left;
+      }
+      hr {
+        display: inline-block;
+      }
+    }
+  }
+}

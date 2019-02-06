@@ -1,0 +1,142 @@
+/*
+** Block of the Tabs with Transition **
+*/
+
+.block-tabswithtransition {
+  background-color: $secodary-bg;
+  padding: 146px 0 115px;
+  transition: background-color 1s;
+  @include mobile-block-padding();
+  @media #{$mobile} {
+    text-align: center;
+  }
+  .field--name-field-tab-button {
+    span {
+      background-color: $gray-dark;
+      color: $light-color-for-dark-bg;
+      cursor: pointer;
+      display: block;
+      font-family: $font-family-sans-serif;
+      font-weight: 700;
+      line-height: 90px;
+      margin-bottom: 1px;
+      max-width: 90px;
+      text-decoration: none;
+      text-transform: uppercase;
+      transition: background-color .3s;
+      width: 100%;
+      @media #{$normal} {
+        line-height: 110px;
+        max-width: 110px;
+      }
+    }
+    .field--item {
+      text-align: center;
+      &:first-child span {
+        border-radius: 4px 4px 0 0;
+      }
+      &:last-child span {
+        border-radius: 0 0 4px 4px;
+      }
+      &.active-tab span,
+      span:hover,
+      span.active-tab {
+        background-color: $bright-color;
+      }
+      @media #{$mobile} {
+        display: inline-block;
+        &:first-child span {
+          border-radius: 4px 0 0 4px;
+        }
+        &:last-child span {
+          border-radius: 0 4px 4px 0;
+        }
+        span {
+          width: 100px;
+        }
+      }
+    }
+  }
+  .field--name-body {
+    padding-left: 3%;
+    padding-right: 3%;
+    button {
+      @extend .button-bright;
+    }
+    div {
+      margin-bottom: 20px;
+    }
+    h3 {
+      margin-bottom: 50px;
+      @media #{$mobile} {
+        margin-top: 25px;
+        margin-bottom: 25px;
+      }
+    }
+    p {
+      margin-bottom: 20px;
+      transition: color 1s;
+    }
+  }
+  .field--name-field-tab-text {
+    display: none;
+  }
+  .field--name-field-tab-image {
+    margin-top: 24px;
+    @media #{$wide} {
+      padding-left: 42px;
+    }
+    img {
+      transition: transform 1.5s cubic-bezier(1, 0, 0.58, 1);
+      @media #{$mobile} {
+        margin: 0 auto;
+      }
+    }
+    .image-toggle img {
+      transform: scaleY(-1);
+    }
+  }
+  &.tab-dark-bg {
+    background-color: $gray-dark;
+    h3 {
+      color: $bright-color;
+    }
+    .field--name-field-tab-button {
+      span {
+        background-color: transparentize($bright-color, 0.7);
+      }
+    }
+  }
+  &.tab-bright-bg {
+    background-color: $bright-color;
+    h3 {
+      color: $gray-dark;
+    }
+    .field--name-field-tab-button {
+      span {
+        background-color: transparentize($light-color-for-dark-bg, 0.7);
+      }
+      .field--item {
+        &.active-tab span,
+        span:hover,
+        span.active-tab {
+          background-color: $gray-dark;
+        }
+      }
+    }
+    .field--name-body {
+      button {
+        background-color: $gray-dark;
+        &:hover {
+          color: $bright-color;
+        }
+        &:active {
+          color: transparentize($bright-color, 0.5);
+        }
+      }
+      p {
+        color: $light-color-for-dark-bg;
+      }
+    }
+  }
+}

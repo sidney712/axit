@@ -1,0 +1,17 @@
+/*
+** Common styling for multi-column type blocks heading **
+*/
+
+.multi-column-block-heading {
+  padding-top: 82px;
+  text-align: center;
+  .field--name-body {
+    margin-bottom: 50px;
+    hr {
+      border-top: 2px solid $bright-color;
+      display: inline-block;
+      margin-top: 13px;
+      width: 64px;
+    }
+  }
+}

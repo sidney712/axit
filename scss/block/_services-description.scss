@@ -1,0 +1,36 @@
+/*
+** Services Description **
+*/
+
+.block-servicesdescription {
+  @extend .multi-column-block-heading;
+  padding-bottom: 101px;
+  @include mobile-block-padding();
+  .field--name-field-columns {
+    @media #{$tablet} {
+      padding-top: 29px;
+    }
+    h3 {
+      margin-top: 27px;
+      margin-bottom: 22px;
+    }
+    span {      
+      border: 2px solid $bright-color;
+      border-radius: 50%;
+      color: $bright-color;
+      display: inline-block;
+      height: 70px;
+      width: 70px;
+      i {
+        color: $bright-color;
+        font-size: 27px;
+        line-height: 67px;
+      }
+    }
+    .field--item {
+      @media #{$mobile} {
+        padding-bottom: 20px;
+      }
+    }
+  }
+}

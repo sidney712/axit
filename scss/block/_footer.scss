@@ -1,0 +1,20 @@
+/*
+** Contact Form **
+*/
+
+.block-footer {
+  text-align: center;
+  img {
+    margin-right: 8px;
+  }
+  p:last-child {
+    color: transparentize($light-color-for-dark-bg, 0.5);
+    font-size: 0.857em;
+  }
+  .fontawesome-icon-inline {
+    color: #ccc;
+    cursor: pointer;
+    font-size: 150%;
+    margin: 0 10px;
+  }
+}

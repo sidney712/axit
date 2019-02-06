@@ -1,0 +1,26 @@
+/*
+** Standard Picture Section **
+*/
+
+.block-standardpicturesection {
+  @extend .block-type-two-columns;
+  background-color: $secodary-bg;
+  padding-bottom: 95px;
+  @include mobile-block-padding();
+  .field--name-field-framed-picture {    
+    margin-top: -9px;
+    @media #{$normal} {
+      float: right;
+    }
+    @media #{$wide} {
+      margin-right: -9.5%;
+    }
+  }
+  .field--name-body {
+    float: left;
+    padding-left: 22px;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
